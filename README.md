@@ -8,10 +8,10 @@ This project implements custom C++ classes for solving systems of linear equatio
 
 ### Part A: Linear Solvers
 
-- `vector.cpp`: Implements a 1D vector with operator overloading and indexing.
-- `matrix.cpp`: Implements a 2D matrix with support for basic operations, determinant, inverse, and pseudo-inverse.
-- `linearsystem.cpp`: Solves square systems using Gaussian elimination with pivoting.
-- `poslinear.cpp`: Solves symmetric positive-definite systems using the **Conjugate Gradient method**.
+- `Vector.cpp`: Implements a 1D vector with operator overloading and indexing.
+- `Matrix.cpp`: Implements a 2D matrix with support for basic operations, determinant, inverse, and pseudo-inverse.
+- `LinearSystem.cpp`: Solves square systems using Gaussian elimination with pivoting.
+- `PosSymLinSystem.cpp`: Solves symmetric positive-definite systems using the **Conjugate Gradient method**.
 
 ### Part B: Regression and Real-world Application
 
