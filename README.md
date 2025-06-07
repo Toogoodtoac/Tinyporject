@@ -1,28 +1,38 @@
-# Tiny Project
+# Tiny Project 
 
-This project implements core linear algebra structures in C++ and applies them to a real-world regression problem: predicting CPU performance from hardware features.
+## Overview
 
-## 🔧 What Was Done
-- Built custom `Vector`, `Matrix`, and `LinearSystem` classes from scratch.
-- Implemented solvers:
-  - Gaussian Elimination
-  - Conjugate Gradient (for symmetric positive-definite systems)
-  - Moore-Penrose Pseudo-inverse
-  - Tikhonov Regularization
-- Used these solvers to perform linear regression on the [UCI CPU Performance dataset](https://archive.ics.uci.edu/ml/datasets/Computer+Hardware).
+This project implements custom C++ classes for solving systems of linear equations and applies them to predict CPU performance using linear regression. It includes support for both square and non-square systems, as well as methods suitable for symmetric positive-definite matrices.
 
+## Structure
 
-## 📈 Results
-- **Moore-Penrose Pseudo-inverse RMSE**: ~59.86
-- **Tikhonov Regularization RMSE**: ~59.86
-- Performance was limited due to model simplicity and dataset characteristics.
+### Part A: Linear Solvers
 
-## 📁 Files
-- `Vector.hpp`, `Matrix.hpp`, `LinearSystem.hpp`: Custom data structures
-- `main.cpp`: Training + prediction pipeline
-- `report.tex`: Full LaTeX project report
+- `vector.cpp`: Implements a 1D vector with operator overloading and indexing.
+- `matrix.cpp`: Implements a 2D matrix with support for basic operations, determinant, inverse, and pseudo-inverse.
+- `linearsystem.cpp`: Solves square systems using Gaussian elimination with pivoting.
+- `poslinear.cpp`: Solves symmetric positive-definite systems using the **Conjugate Gradient method**.
 
-## ✅ To Run
-```bash
-g++ -std=c++17 main.cpp -o linear_regression
-./linear_regression
+### Part B: Regression and Real-world Application
+
+- `main.cpp`: Applies **Moore-Penrose Pseudo-inverse** and **Tikhonov Regularization** for linear regression.
+    - Loads and processes CPU performance dataset.
+    - Trains regression models using your solvers.
+    - Evaluates performance using RMSE.
+
+## Key Methods
+
+- Gaussian Elimination (for general square systems)
+- Conjugate Gradient (`poslinear.cpp`, for SPD matrices)
+- Moore-Penrose Pseudo-inverse (`regression.cpp`)
+- Tikhonov Regularization (`regression.cpp`)
+
+## Results
+
+- RMSE (Pseudo-inverse): ~59.86
+- RMSE (Tikhonov): ~59.86
+- Conjugate Gradient showed fast convergence on SPD systems
+
+## Author
+
+Ngo Anh Hieu — Vietnamese-German University
