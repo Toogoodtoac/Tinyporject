@@ -20,13 +20,6 @@ This project implements custom C++ classes for solving systems of linear equatio
     - Trains regression models using your solvers.
     - Evaluates performance using RMSE.
 
-## Key Methods
-
-- Gaussian Elimination (for general square systems)
-- Conjugate Gradient (`poslinear.cpp`, for SPD matrices)
-- Moore-Penrose Pseudo-inverse (`regression.cpp`)
-- Tikhonov Regularization (`regression.cpp`)
-
 ## Results
 
 - RMSE (Pseudo-inverse): ~59.86
