@@ -1,4 +1,4 @@
-# Linear Regression Project
+# Tiny Project
 
 This project implements core linear algebra structures in C++ and applies them to a real-world regression problem: predicting CPU performance from hardware features.
 
@@ -11,14 +11,6 @@ This project implements core linear algebra structures in C++ and applies them t
   - Tikhonov Regularization
 - Used these solvers to perform linear regression on the [UCI CPU Performance dataset](https://archive.ics.uci.edu/ml/datasets/Computer+Hardware).
 
-## 📊 Problem
-Predict Published Relative Performance (PRP) from 6 hardware features:
-- MYCT, MMIN, MMAX, CACH, CHMIN, CHMAX
-
-## 🧠 Approach
-- Removed non-numeric columns.
-- Split dataset into 80% train, 20% test.
-- Solved using normal equation and Tikhonov regularized variant.
 
 ## 📈 Results
 - **Moore-Penrose Pseudo-inverse RMSE**: ~59.86
